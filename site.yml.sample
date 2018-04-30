@@ -85,14 +85,7 @@
 
   roles:
     - ceph-defaults
-
-  tasks:
-    - name: validate vars
-      validate:
-        mode: permissive
-
-    - fail:
-        msg: "failing for testing"
+    - ceph-validate
 
 - hosts: mons
   gather_facts: false
